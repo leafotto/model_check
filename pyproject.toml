@@ -1,0 +1,17 @@
+[project]
+name = "model-check"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "nemo-microservices",
+    "modelscope",
+    "zai-sdk",
+    "httpx>=0.28.1",
+    "pyyaml>=6.0.3",
+]
+
+[tool.pyright]
+reportPossiblyUnboundVariable = false
+reportOptionalMemberAccess = false

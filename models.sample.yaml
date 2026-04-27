@@ -1,0 +1,35 @@
+# Model Testing Configuration
+
+providers:
+  - name: nvidia
+    display: NVIDIA NIM
+    base_url: https://integrate.api.nvidia.com/v1
+    api_key: 
+    fetch_models: true
+
+  - name: modelscope
+    display: ModelScope
+    base_url: https://api-inference.modelscope.cn/v1
+    api_key: 
+    fetch_models: true
+
+  - name: bigmodel
+    display: BigModel
+    base_url: https://open.bigmodel.cn/api/paas/v4
+    api_key: 
+    fetch_models: true
+    headers:
+      Content-Type: application/json
+    auth_header: Authorization
+    auth_prefix: ""
+
+  - name: OpenRouter
+    display: OpenRouter
+    base_url: https://openrouter.ai/api/v1
+    api_key: 
+    fetch_models: true
+    headers:
+      HTTP-Referer: https://github.com/anomalyco/model_check
+      X-Title: Model Check
+    auth_header: Authorization
+    auth_prefix: "Bearer "
