@@ -399,9 +399,9 @@ async def main():
 
         print(f"\nSelected: {model.id}")
         print(t("commands"))
+        timeout_val = default_timeout
         print(f"[Timeout: {timeout_val}s]")
 
-        timeout_val = default_timeout
         key_checker = KeyChecker()
 
         while True:
