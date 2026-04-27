@@ -403,11 +403,12 @@ async def main():
         print(f"[Timeout: {timeout_val}s]")
 
         key_checker = KeyChecker()
+        default_prompt = "你好" if LANG["current"] == "zh" else "Hi"
 
         while True:
-            prompt = input(f"\n{t('you')}").strip()
+            prompt = input(f"\n{t('you')} (默认: {default_prompt}): ").strip()
             if not prompt:
-                continue
+                prompt = default_prompt
 
             if prompt.lower() == "b":
                 break
